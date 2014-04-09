@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3650660f-9ecd-4974-b0a8-64d65becc426" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/berlin-clock.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="DELETED" beforePath="D:\Robert\GitHub\berlin-clock\berlin-clock.iws" afterPath="" />
     </list>
     <ignored path="berlin-clock.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -67,7 +66,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name=".gitignore" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="7" selection-start="7" selection-end="7" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4237">
@@ -94,16 +93,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="berlin-clock.iws" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/berlin-clock.iws">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="61" selection-end="61" vertical-scroll-proportion="0.0" vertical-offset="38" max-vertical-offset="10488">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="berlin-clock.ipr" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="berlin-clock.ipr" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/berlin-clock.ipr">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1976">
@@ -393,7 +383,11 @@
       <created>1397082625410</created>
       <updated>1397082625410</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="IntelliJ changes in gitignore">
+      <created>1397082858954</created>
+      <updated>1397082858954</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -421,7 +415,7 @@
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -458,7 +452,8 @@
       <TodoPanelSettings />
     </option>
     <MESSAGE value="Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+    <MESSAGE value="IntelliJ changes in gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="IntelliJ changes in gitignore" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -499,13 +494,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/berlin-clock.ipr">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1976">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="0" selection-start="1000" selection-end="1000" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="779">
@@ -527,16 +515,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/berlin-clock.iws">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="61" selection-end="61" vertical-scroll-proportion="0.0" vertical-offset="38" max-vertical-offset="10488">
+        <state line="0" column="7" selection-start="7" selection-end="7" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4237">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/berlin-clock.ipr">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="7" selection-start="7" selection-end="7" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4237">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1976">
           <folding />
         </state>
       </provider>
