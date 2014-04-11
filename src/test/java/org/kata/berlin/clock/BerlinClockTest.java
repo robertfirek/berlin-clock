@@ -24,16 +24,16 @@ public class BerlinClockTest {
         assertThat(berlinClockTimeMidnight.toStringRepresentation(), is("" +
                 "Y\n" +
                 "RRRR\n" +
-                "RRRR"
-//                "OOOOOOOOOOO\n" +
-//                "OOOO"
+                "RRRR\n" +
+                "OOOOOOOOOOO\n" +
+                "OOOO"
         ));
         assertThat(berlinClockTimeRandom.toStringRepresentation(), is("" +
                 "O\n" +
                 "RROO\n" +
-                "RRRO"
-//                "YYRYYROOOO\n" +
-//                "YYOO"
+                "RRRO\n" +
+                "YYRYYROOOOO\n" +
+                "YYOO"
         ));
     }
 
@@ -66,16 +66,16 @@ public class BerlinClockTest {
         assertThat(berlinClockTimeEvenSecond.toStringRepresentation(), is("" +
                 "Y\n" +
                 "OOOO\n" +
+                "OOOO\n" +
+                "OOOOOOOOOOO\n" +
                 "OOOO"
-//                "OOOOOOOOOO\n" +
-//                "OOOO"
         ));
         assertThat(berlinClockTimeOddSecond.toStringRepresentation(), is("" +
                 "O\n" +
                 "OOOO\n" +
+                "OOOO\n" +
+                "OOOOOOOOOOO\n" +
                 "OOOO"
-//                "OOOOOOOOOOO\n" +
-//                "OOOO"
         ));
     }
 
@@ -119,44 +119,107 @@ public class BerlinClockTest {
         assertThat(berlinClockTimeMidnight.toStringRepresentation(), is("" +
                 "Y\n" +
                 "OOOO\n" +
+                "OOOO\n" +
+                "OOOOOOOOOOO\n" +
                 "OOOO"
-//                "OOOOOOOOOO\n" +
-//                "OOOO"
         ));
         assertThat(berlinClockTimeBeforeFive.toStringRepresentation(), is("" +
                 "Y\n" +
                 "OOOO\n" +
-                "RRRO"
-//                "OOOOOOOOOO\n" +
-//                "OOOO"
+                "RRRO\n" +
+                "OOOOOOOOOOO\n" +
+                "OOOO"
         ));
         assertThat(berlinClockTimeAfterFive.toStringRepresentation(), is("" +
                 "Y\n" +
                 "ROOO\n" +
-                "ROOO"
-//                "OOOOOOOOOO\n" +
-//                "OOOO"
+                "ROOO\n" +
+                "OOOOOOOOOOO\n" +
+                "OOOO"
         ));
         assertThat(berlinClockTimeAfterTen.toStringRepresentation(), is("" +
                 "Y\n" +
                 "RROO\n" +
-                "RRRR"
-//                "OOOOOOOOOO\n" +
-//                "OOOO"
+                "RRRR\n" +
+                "OOOOOOOOOOO\n" +
+                "OOOO"
         ));
         assertThat(berlinClockTimeAfterFifteen.toStringRepresentation(), is("" +
                 "Y\n" +
                 "RRRO\n" +
-                "RRRR"
-//                "OOOOOOOOOO\n" +
-//                "OOOO"
+                "RRRR\n" +
+                "OOOOOOOOOOO\n" +
+                "OOOO"
         ));
         assertThat(berlinClockTimeAfterTwenty.toStringRepresentation(), is("" +
                 "Y\n" +
                 "RRRR\n" +
-                "RROO"
-//                "OOOOOOOOOO\n" +
-//                "OOOO"
+                "RROO\n" +
+                "OOOOOOOOOOO\n" +
+                "OOOO"
+        ));
+
+    }
+
+
+    @Test
+    public void shouldStoreMinutesInTwoRows() throws Exception {
+        String someHourMinuteQuarterPast = "15::17:00";
+        String someHourMinuteHalfPast = "20::40:00";
+        String someHourMinuteQuarterTo = "23::47:00";
+        String someHourMinuteFiftyNine = "00::59:00";
+        BerlinClock berlinClock = new BerlinClock(new HourFormatter());
+
+        BerlinClockTime berlinClockTimeMinuteQuarterPast = berlinClock.getBerlinClockTime(someHourMinuteQuarterPast);
+        BerlinClockTime berlinClockTimeMinuteHalfPast = berlinClock.getBerlinClockTime(someHourMinuteHalfPast);
+        BerlinClockTime berlinClockTimeMinuteQuarterTo = berlinClock.getBerlinClockTime(someHourMinuteQuarterTo);
+        BerlinClockTime berlinClockTimeMinuteFiftyNine = berlinClock.getBerlinClockTime(someHourMinuteFiftyNine);
+
+        assertThat(berlinClockTimeMinuteFiftyNine.getMinuteRows().getFirstRow().getLamp(1).getState(), is(Lamp.State.YELLOW));
+        assertThat(berlinClockTimeMinuteFiftyNine.getMinuteRows().getFirstRow().getLamp(2).getState(), is(Lamp.State.YELLOW));
+        assertThat(berlinClockTimeMinuteFiftyNine.getMinuteRows().getFirstRow().getLamp(3).getState(), is(Lamp.State.RED));
+        assertThat(berlinClockTimeMinuteFiftyNine.getMinuteRows().getFirstRow().getLamp(4).getState(), is(Lamp.State.YELLOW));
+        assertThat(berlinClockTimeMinuteFiftyNine.getMinuteRows().getFirstRow().getLamp(5).getState(), is(Lamp.State.YELLOW));
+        assertThat(berlinClockTimeMinuteFiftyNine.getMinuteRows().getFirstRow().getLamp(6).getState(), is(Lamp.State.RED));
+        assertThat(berlinClockTimeMinuteFiftyNine.getMinuteRows().getFirstRow().getLamp(7).getState(), is(Lamp.State.YELLOW));
+        assertThat(berlinClockTimeMinuteFiftyNine.getMinuteRows().getFirstRow().getLamp(8).getState(), is(Lamp.State.YELLOW));
+        assertThat(berlinClockTimeMinuteFiftyNine.getMinuteRows().getFirstRow().getLamp(9).getState(), is(Lamp.State.RED));
+        assertThat(berlinClockTimeMinuteFiftyNine.getMinuteRows().getFirstRow().getLamp(10).getState(), is(Lamp.State.YELLOW));
+        assertThat(berlinClockTimeMinuteFiftyNine.getMinuteRows().getFirstRow().getLamp(11).getState(), is(Lamp.State.YELLOW));
+
+        assertThat(berlinClockTimeMinuteFiftyNine.getMinuteRows().getSecondRow().getLamp(1).getState(), is(Lamp.State.YELLOW));
+        assertThat(berlinClockTimeMinuteFiftyNine.getMinuteRows().getSecondRow().getLamp(2).getState(), is(Lamp.State.YELLOW));
+        assertThat(berlinClockTimeMinuteFiftyNine.getMinuteRows().getSecondRow().getLamp(3).getState(), is(Lamp.State.YELLOW));
+        assertThat(berlinClockTimeMinuteFiftyNine.getMinuteRows().getSecondRow().getLamp(4).getState(), is(Lamp.State.YELLOW));
+
+
+        assertThat(berlinClockTimeMinuteQuarterPast.toStringRepresentation(), is("" +
+                "Y\n" +
+                "RRRO\n" +
+                "OOOO\n" +
+                "YYROOOOOOOO\n" +
+                "YYOO"
+        ));
+        assertThat(berlinClockTimeMinuteHalfPast.toStringRepresentation(), is("" +
+                "Y\n" +
+                "RRRR\n" +
+                "OOOO\n" +
+                "YYRYYRYYOOO\n" +
+                "OOOO"
+        ));
+        assertThat(berlinClockTimeMinuteQuarterTo.toStringRepresentation(), is("" +
+                "Y\n" +
+                "RRRR\n" +
+                "RRRO\n" +
+                "YYRYYRYYROO\n" +
+                "YYOO"
+        ));
+        assertThat(berlinClockTimeMinuteFiftyNine.toStringRepresentation(), is("" +
+                "Y\n" +
+                "OOOO\n" +
+                "OOOO\n" +
+                "YYRYYRYYRYY\n" +
+                "YYYY"
         ));
 
     }
