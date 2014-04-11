@@ -8,7 +8,7 @@ public class Lamp {
     }
 
     public enum State {
-        YELLOW("Y"), OFF("O");
+        YELLOW("Y"), OFF("O"), RED("R");
 
         private String stringRepresentation;
 
